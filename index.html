@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by Vakantanka (http://jsbin.com/gocalum/102/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>Fenyvesi László - online névjegy</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style id="jsbin-css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url('https://i.imgur.com/cWqYe3m.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Comfortaa', sans-serif;
+  color: rgb(25,25,112);
+}
+h1 {
+  font-family: 'Montserrat', cursive;
+  color: rgba(25,25,112,.7);
+}
+a {
+  color: rgba(25, 25, 112,.5);
+  text-decoration: none;
+}
+a:hover {
+  color: #c8360c;
+}
+h1 {
+  font-size: 2.25em;
+  font-variant: small-caps;
+}
+h2 {
+  color: rgba(25, 25, 112,.8);
+  font-weight: 500;
+}
+.profile-card {
+  position: relative;
+  width: 67vw;
+  height: 67vh;
+  background-color: hsla(0, 0%, 100%, .7);
+  border-radius: 30px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+  margin-top: 13vh;
+}
+.head, .content {
+  float: left;
+  margin: 0 auto;
+}
+.head {
+  width: 26%;
+  height: 100%;
+  background: url('https://i.imgur.com/2HvmOlf.jpg') no-repeat center center;
+  background-size: auto 100%;
+  border-radius: 30px 0 0 30px;
+}
+.profile-image {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+.profile-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 1px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 10px;
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(30%);
+}
+.profile-image img:hover {
+  transform: scale(2.75);
+  filter: grayscale(10%);
+}
+.content {
+  padding: 1.5rem;
+  width: 73%;
+}
+.name-headline h2 {
+  border-top: 1px solid hsla(0, 0%, 30%, .8);
+  letter-spacing: .04rem;
+  padding-top: .25rem;
+  margin-bottom: 1rem;
+}
+ul.location, p.hashtags, p.music {
+  font-size: 0.75rem;
+} 
+.location li {
+  list-style-type: none;
+  padding: .1rem;
+  height: 1.5rem;
+}
+.location i {
+  width: 1.5rem;
+  text-align: center;
+}
+p.about {
+  margin: 1rem;
+  font-size: .8rem;
+  line-height: 1.25rem;
+}
+.links {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+p.hashtags {
+  position: absolute;
+  bottom: 3rem;
+  color: rgba(25, 25, 112, .5); 
+  width: 50%;
+}
+p.music {
+  position: absolute;
+  bottom: 1.5rem;
+  color: rgba(25, 25, 112, .5); 
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 83%;
+  }
+  .profile-card {
+    height: auto;
+    margin: 1em auto;
+  }
+	.head {
+		display: none;
+	}
+  .hashtags {
+    display: none;
+  }
+  .profile-image {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .musicplayer {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    width: 50%;
+  }
+  .musicplayer {
+    padding-top: 56.25%;
+    display: block;
+    float: right;
+    width: 23%;
+    height: 100%;
+    padding: 32px;
+    background-color: rgba(125, 125, 212, .5);
+    border-radius: 0 30px 30px 0;
+  }
+  .musicplayer iframe {
+   border: 0;
+   height: 77%;
+   left: 0;
+   position: relative;
+   top: 0;
+   width: 100%;
+  }
+  .musicplayer h2 {
+    margin-bottom: 2rem;
+  }
+  p.music {
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="head">
+    </div>
+    <div class="content">
+      <div class="profile-image">
+        <img src="https://i.imgur.com/dyZThdi.png" alt="Fenyvesi László profilkép">
+      </div>
+      <div class="name-headline">
+        <h1>Fenyvesi László</h1>
+        <h2>webfejlesztő, amatőr zenész</h2>
+        <ul class="location">
+          <li><a href="https://www.google.com/maps/@46.0737067,18.2121186,128a,35y,330.19h,32.86t/data=!3m1!1e3!4m4!7m3!1m1!1s105502456664422957783!2e2" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;Pécs,&nbsp;Magyarország</a></li>
+          <li><a href="mailto:laszlo.fenyvesi@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;laszlo.fenyvesi@gmail.com</a></li>
+          <li><a href="tel:+36304835864" target="_blank"><i class="fa fa-phone"></i>&nbsp;(36)&nbsp;304835864</a></li>
+        </ul>
+      </div>
+      <p class="about">
+<!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ex laoreet nisl pharetra pharetra eget ac metus. Phasellus sapien mi, pretium nec maximus in, elementum nec ipsum. Nam nec neque eros. -->
+        Könyvtárosi végzettséggel klinikai informatikusként dolgozom. Szeretek új dolgokkal ismerkedni az informatikában és a zenében is. Szabadidőmben gitározom, nemrég elkezdtem zongorán tanulni és gyakran kirándulok a családommal. 
+      </p>
+      <p class="hashtags">
+        #webfejlesztés #programozás #zene #wordpress #php #mysql #html #css #jquery #abletonlive #cityrocks
+      </p>
+      <p class="music">
+        <a href="https://soundcloud.com/folktronika" target="_blank"><i class="fa fa-play"></i>&nbsp;Hallgas bele a zenéimbe!</a>
+      </p>
+      <p class="links">
+        <a href="https://www.linkedin.com/in/fenyvesi-l%C3%A1szl%C3%B3-38bb98117/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/laszlo.fenyvesi.50/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </p>
+    </div>
+    <div class="musicplayer">
+      <h2>Soundcloud: Folktronika</h2>
+      <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/16932983&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>    </div>
+  </div>
+</body>
+</html>
